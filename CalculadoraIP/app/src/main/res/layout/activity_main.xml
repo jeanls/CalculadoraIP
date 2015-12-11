@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="datasign.calculadoraip.MainActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:text="Endereço de IP: "
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_weight="0.3"
+                android:inputType="textUri|numberDecimal"
+                android:ems="10"
+                android:id="@+id/activity_main_ip" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="/"
+                android:textSize="@dimen/abc_text_size_medium_material"
+                android:layout_height="wrap_content" />
+            <Spinner
+                android:layout_width="match_parent"
+                android:id="@+id/activity_home_bits"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/abc_text_size_medium_material"
+            android:text="Máscara de Sub Rede: "
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <EditText
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:layout_weight="1"
+                android:inputType="textUri|numberDecimal"
+                android:ems="10"
+                android:id="@+id/activity_main_mask" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calcular"
+        android:layout_margin="15dp"
+        android:textColor="@android:color/white"
+        android:background="@color/colorPrimary"
+        android:id="@+id/activity_main_btn_calcula"
+        android:layout_gravity="center_horizontal" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Rede: "
+            android:id="@+id/activity_main_rede"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="BroadCast: "
+            android:id="@+id/activity_main_broadcast"
+            android:layout_margin="15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Endereços: "
+            android:id="@+id/activity_main_qtd_hosts"
+            android:layout_margin="15dp" />
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>
